@@ -1,0 +1,23 @@
+#----------------------These are notes of potentially useful functions and system calls------------------------#
+
+With function remove() we can delete a file. Let us take a look at an example:
+
+#include<stdio.h>
+
+<	int main(void)								>
+<	{									>
+<		char buffer[101];						>
+<										>
+<		printf("Name of file to delete:  ");				>
+<		gets_s(buffer, 100);						>
+<										>
+<		if(remove(buffer) == 0)						>
+<		  printf("File %s  deleted.\n", buffer);			>
+<		else	       	   						>
+<		  fprintf(stderr, "Error deleting the file %s.\n", buffer);	>
+<	}									>
+
+
+With the rename(const char *old, const char *new) function it is possible give a file a new name
+
+
